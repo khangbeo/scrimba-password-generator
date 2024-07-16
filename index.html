@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-  <script src="index.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <section class="top-content">
+                <h1 class="title">
+                    Generate a <br /><span>random password</span>
+                </h1>
+                <p class="title-description">
+                    Never use an insecure password again
+                </p>
+                <label for="passwordLength"
+                    >Set passworld length (max 20):
+                    <input
+                        type="number"
+                        id="passwordLength"
+                        value="15"
+                        min="1"
+                        max="15"
+                    />
+                </label>
+
+                <button class="generate-password" id="generatePassword">
+                    Generate passwords
+                </button>
+            </section>
+            <hr />
+            <section class="output">
+                <span class="passwordOne"></span>
+                <span class="passwordTwo"></span>
+            </section>
+        </main>
+
+        <script src="index.js"></script>
+    </body>
 </html>

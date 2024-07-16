@@ -1,14 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 /*
   2. Remove default margin
 */
 * {
-  margin: 0;
+    margin: 0;
+    font-family: "Karla", sans-serif;
 }
 /*
   Typographic tweaks!
@@ -16,31 +20,135 @@
   4. Improve text rendering
 */
 body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: #1c1c1c;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 /*
   5. Improve media defaults
 */
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
 }
 /*
   6. Remove built-in form typography styles
 */
-input, button, textarea, select {
-  font: inherit;
+input,
+button,
+textarea,
+select {
+    font: inherit;
 }
 /*
   7. Avoid text overflows
 */
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
 }
 /*
   8. Create a root stacking context
 */
-#root, #__next {
-  isolation: isolate;
+#root,
+#__next {
+    isolation: isolate;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 550px;
+    height: 550px;
+    background-color: #1f2937;
+    padding: 45px;
+}
+
+.title {
+    color: white;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 40px;
+}
+.title span {
+    color: #4adf86;
+}
+
+.title-description {
+    color: #d5d4d8;
+    font-size: 20px;
+    line-height: 60px;
+}
+
+.generate-password {
+    color: white;
+    background-color: #10b981;
+    padding: 9px 15px;
+    border-radius: 6px;
+    border-style: none;
+    margin-top: 40px;
+    width: 191px;
+}
+
+.passwordOne,
+.passwordTwo {
+    color: #55f991;
+    background-color: #273549;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 6px;
+    height: 39px;
+    padding: 8px;
+    text-align: center;
+}
+
+hr {
+    border: 1px solid #273549;
+    margin: 40px 0;
+}
+
+.top-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.output {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.output span:hover {
+    cursor: pointer;
+    background-color: #223044;
+}
+
+label {
+    color: #d5d4d8;
+    line-height: 40px;
+}
+
+button:hover {
+    background-color: #058359;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #036343;
+    transform: translateY(2px);
 }
